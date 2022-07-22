@@ -1,4 +1,4 @@
-package com.xlkk.hello;
+package com.xlkk.normal;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

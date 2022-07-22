@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8c26c2-4c68-4d79-9d84-c103c70542ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/hello/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/hello/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/utils/RabbitMQUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Task01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Worker01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/hello/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/normal/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/hello/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/normal/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/hello/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/hello/Producer.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +29,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1658393255" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1658393254" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,23 +65,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.Worker01">
     <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xlkk.hello.Producer" />
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.normal.Producer" />
       <module name="rabbitmq-hello" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xlkk.hello.*" />
+          <option name="PATTERN" value="com.xlkk.normal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.work.Task01" />
+      <module name="rabbitmq-hello" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlkk.work.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Worker01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.work.Worker01" />
+      <module name="rabbitmq-hello" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlkk.work.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,7 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Producer" />
+        <item itemvalue="Application.Worker01" />
+        <item itemvalue="Application.Task01" />
+        <item itemvalue="Application.com.xlkk.normal.Producer" />
       </list>
     </recent_temporary>
   </component>
@@ -81,7 +132,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658389191565</updated>
-      <workItem from="1658389193958" duration="3873000" />
+      <workItem from="1658389193958" duration="4635000" />
+      <workItem from="1658451584142" duration="3412000" />
     </task>
     <servers />
   </component>
