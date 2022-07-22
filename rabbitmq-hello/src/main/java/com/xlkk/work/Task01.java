@@ -15,7 +15,6 @@ import java.util.concurrent.TimeoutException;
 public class Task01 {
     //队列名称
     public static final String QUEUE_NAME = "hello";
-
     public static void main(String[] args) throws IOException, TimeoutException {
         Channel channel = RabbitMQUtil.getChannel();
         //进行队列声明
@@ -27,8 +26,5 @@ public class Task01 {
             channel.basicPublish("",QUEUE_NAME,null,message.getBytes());
             System.out.println("发送消息完成："+message);
         }
-
     }
-
-
 }

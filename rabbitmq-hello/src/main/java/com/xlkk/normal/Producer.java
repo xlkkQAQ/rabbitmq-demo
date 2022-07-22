@@ -14,14 +14,12 @@ import java.util.concurrent.TimeoutException;
  */
 public class Producer {
     public static final String QUEUE_NAME="hello";
-
     //发消息
     public static void main(String[] args) {
         //创建连接工厂
         ConnectionFactory connectionFactory = new ConnectionFactory();
 //        connectionFactory.setConnectionTimeout(60000);
         //工厂ip-连接rabbitmp
-
         connectionFactory.setHost("49.235.100.175");
 //        connectionFactory.setPort(5672);
 //        connectionFactory.setVirtualHost("admin");
@@ -32,10 +30,8 @@ public class Producer {
         Connection connection = null;
         try {
             connection = connectionFactory.newConnection();
-
             //获取信道
             Channel channel = connection.createChannel();
-
             /**
              * 创建一个队列
              * 1.队列名称
@@ -44,7 +40,6 @@ public class Producer {
              * 4.是否自动删除，最后一个消费者端开连接以后，是否自动删除
              * 5.其他参数
              */
-
             channel.queueDeclare(QUEUE_NAME,false,false,false,null);
             //发消息
             String message = "hello xlkk";
@@ -62,8 +57,5 @@ public class Producer {
         } catch (TimeoutException e) {
             throw new RuntimeException(e);
         }
-
-
     }
-
 }
