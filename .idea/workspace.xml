@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8c26c2-4c68-4d79-9d84-c103c70542ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/utils/RabbitMQUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/work/Task01.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/work/Worker01.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/normal/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/normal/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Task01.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Task01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Worker01.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Worker01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/hello/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/normal/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/hello/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/normal/Producer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658389191565</updated>
       <workItem from="1658389193958" duration="4635000" />
-      <workItem from="1658451584142" duration="5405000" />
+      <workItem from="1658451584142" duration="7591000" />
     </task>
     <task id="LOCAL-00001" summary="feat:新增工作模式demo">
       <created>1658456217633</created>
@@ -148,15 +141,46 @@
       <option name="project" value="LOCAL" />
       <updated>1658456217633</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor:重新规范项目结构">
+      <created>1658459945866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658459945866</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:新增工作模式demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:新增工作模式demo" />
+    <MESSAGE value="refactor:重新规范项目结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor:重新规范项目结构" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
