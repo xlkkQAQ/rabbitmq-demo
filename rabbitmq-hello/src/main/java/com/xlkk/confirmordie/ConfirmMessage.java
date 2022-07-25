@@ -5,7 +5,6 @@ import com.rabbitmq.client.ConfirmCallback;
 import com.xlkk.utils.RabbitMQUtil;
 
 import java.util.UUID;
-import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentNavigableMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
@@ -22,9 +21,9 @@ public class ConfirmMessage {
     public static final int MESSAGE_COUNT = 1000;
     public static void main(String[] args) {
         //1.调取单个确认
-//        publishIndividually();
+        publishIndividually();
         //2.调取批量确认
-//        publishBatch();
+        publishBatch();
         //3.调取异步批量确认
         publishAsync();
     }
@@ -102,7 +101,7 @@ public class ConfirmMessage {
             channel.queueDeclare(queueName,true,false,false,null);
             //开启发布确认模式
             channel.confirmSelect();
-            /**
+            /*
              * 线程安全有序的哈希表，适用于高并发的情况下
              * 1.能够轻松地将序号与消息关联
              * 2.轻松地根据序号批量删除条目
@@ -127,7 +126,7 @@ public class ConfirmMessage {
                 }
                 System.out.println("确认的消息："+deliveryTag);
             };
-            /**
+            /*
              * deliveryTag:消息的编号
              * multiple:是否批量发布
              */

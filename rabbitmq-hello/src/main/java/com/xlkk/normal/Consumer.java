@@ -11,15 +11,11 @@ import java.util.concurrent.TimeoutException;
  */
 public class Consumer {
     public static final String QUEUE_NAME="hello";
-    //接受消息
+
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
-        //工厂ip-连接rabbitmp
-
+        //工厂ip-连接RabbitMQ
         connectionFactory.setHost("49.235.100.175");
-//        connectionFactory.setPort(5672);
-//        connectionFactory.setVirtualHost("admin");
-        //设置用户名和密码
         connectionFactory.setUsername("admin");
         connectionFactory.setPassword("admin");
 

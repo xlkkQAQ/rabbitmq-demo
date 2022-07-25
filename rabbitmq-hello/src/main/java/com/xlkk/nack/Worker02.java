@@ -39,6 +39,9 @@ public class Worker02 {
                 };
                 //采用手动应答
                 boolean autoAck = false;
+                //设置预取值
+                int prefetchCount = 5;
+                channel.basicQos(prefetchCount);
                 channel.basicConsume(QUEUE_NAME,autoAck,deliverCallback,callback);
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -69,6 +72,9 @@ public class Worker02 {
                 };
                 //采用手动应答
                 boolean autoAck = false;
+                //设置预取值
+                int prefetchCount = 2;
+                channel.basicQos(prefetchCount);
                 channel.basicConsume(QUEUE_NAME,autoAck,deliverCallback,callback);
             } catch (IOException e) {
                 throw new RuntimeException(e);

@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8c26c2-4c68-4d79-9d84-c103c70542ee" name="Changes" comment=":bug:">
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/nack/Task02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/utils/SleepUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/fanout/EmitLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/fanout/ReceiveLog1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/fanout/ReceiveLog2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/confirmordie/ConfirmMessage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/confirmordie/ConfirmMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/confirmordie/ConfirmMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/nack/Worker02.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/nack/Worker02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/normal/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/normal/Producer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/work/Task01.class" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/work/Task01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/work/Worker01.class" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/work/Worker01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/normal/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/normal/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Task01.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/src/main/java/com/xlkk/work/Task01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/normal/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-hello/target/classes/com/xlkk/normal/Consumer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -34,6 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -69,24 +75,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Worker02">
-    <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xlkk.normal.Producer" />
+}</component>
+  <component name="RunManager" selected="Application.com.xlkk.fanout.EmitLog">
+    <configuration name="ConfirmMessage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.confirmordie.ConfirmMessage" />
       <module name="rabbitmq-hello" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xlkk.normal.*" />
+          <option name="PATTERN" value="com.xlkk.confirmordie.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +100,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xlkk.work.Task01" />
+    <configuration name="EmitLog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.fanout.EmitLog" />
       <module name="rabbitmq-hello" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xlkk.work.*" />
+          <option name="PATTERN" value="com.xlkk.fanout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceiveLog1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.fanout.ReceiveLog1" />
+      <module name="rabbitmq-hello" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlkk.fanout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceiveLog2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xlkk.fanout.ReceiveLog2" />
+      <module name="rabbitmq-hello" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlkk.fanout.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,39 +152,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Worker01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xlkk.work.Worker01" />
-      <module name="rabbitmq-hello" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xlkk.work.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Worker02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xlkk.nack.Worker02" />
-      <module name="rabbitmq-hello" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xlkk.nack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Worker02" />
+        <item itemvalue="Application.com.xlkk.fanout.ReceiveLog2" />
+        <item itemvalue="Application.com.xlkk.fanout.ReceiveLog1" />
+        <item itemvalue="Application.com.xlkk.fanout.EmitLog" />
+        <item itemvalue="Application.ConfirmMessage" />
         <item itemvalue="Application.Task02" />
-        <item itemvalue="Application.Worker01" />
-        <item itemvalue="Application.Task01" />
-        <item itemvalue="Application.com.xlkk.normal.Producer" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +171,9 @@
       <option name="presentableId" value="Default" />
       <updated>1658389191565</updated>
       <workItem from="1658389193958" duration="4635000" />
-      <workItem from="1658451584142" duration="10003000" />
+      <workItem from="1658451584142" duration="15942000" />
+      <workItem from="1658632310812" duration="1875000" />
+      <workItem from="1658716342993" duration="8314000" />
     </task>
     <task id="LOCAL-00001" summary="feat:新增工作模式demo">
       <created>1658456217633</created>
@@ -181,7 +189,28 @@
       <option name="project" value="LOCAL" />
       <updated>1658459945866</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":new: feat:新增自动应答demo">
+      <created>1658473004839</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658473004839</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:新增发布确认模式demo(包括单个发布确认和批量发布确认) :new:">
+      <created>1658480444692</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658480444692</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:新增异步确认发布demo :new:">
+      <created>1658718906274</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658718906274</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +242,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:新增工作模式demo" />
     <MESSAGE value="refactor:重新规范项目结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor:重新规范项目结构" />
+    <MESSAGE value=":new: feat:新增自动应答demo" />
+    <MESSAGE value="feat:新增发布确认模式demo(包括单个发布确认和批量发布确认) :new:" />
+    <MESSAGE value="feat:新增异步确认发布demo :new:" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:新增异步确认发布demo :new:" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
