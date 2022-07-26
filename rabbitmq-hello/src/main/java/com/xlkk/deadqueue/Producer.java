@@ -25,8 +25,8 @@ public class Producer {
         for (int i = 1; i <= 10; i++) {
             String message = "info "+i;
             //通过设置props来设置相关参数的设置--设置过期时间
-            AMQP.BasicProperties basicProps = new AMQP.BasicProperties()
-                    .builder().expiration("10000").build();
+//            AMQP.BasicProperties basicProps = new AMQP.BasicProperties()
+//                    .builder().expiration("10000").build();
             channel.basicPublish(EXCHANGE_NAME,"zhangsan",null,message.getBytes(StandardCharsets.UTF_8));
         }
     }
