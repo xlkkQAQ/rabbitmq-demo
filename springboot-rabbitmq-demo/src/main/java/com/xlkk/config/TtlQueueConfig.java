@@ -1,5 +1,6 @@
 package com.xlkk.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,7 @@ import java.util.Map;
  * @author xlkk
  * @date 2022/7/28 0028 15:41
  */
+@Slf4j
 @Configuration
 public class TtlQueueConfig {
     /**
@@ -55,7 +57,7 @@ public class TtlQueueConfig {
         arguments.put("x-dead-letter-routing-key","YD");
         //设置过期时间-单位 ms
         arguments.put("x-message-ttl",10000);
-
+        log.info("路过queueA的创建");
         return QueueBuilder.durable(QUEUE_A).withArguments(arguments).build();
     }
 
@@ -81,22 +83,29 @@ public class TtlQueueConfig {
      * 绑定
      */
     @Bean
-    public BindingBuilder.GenericArgumentsConfigurer queueABindingX(@Qualifier("queueA")Queue queueA,
-                                                                    @Qualifier("xExchange")Exchange xExchange){
+    public Binding queueABindingX(@Qualifier("queueA")Queue queueA,
+                                  @Qualifier("xExchange")DirectExchange xExchange){
+        log.info("路过XA的绑定");
         return BindingBuilder.bind(queueA).to(xExchange).with("XA");
     }
+
     @Bean
-    public BindingBuilder.GenericArgumentsConfigurer queueBBindingX(@Qualifier("queueB")Queue queueB,
-                                                                    @Qualifier("xExchange")Exchange xExchange){
+    public Binding queueBBindingX(@Qualifier("queueB") Queue queueB,
+                                  @Qualifier("xExchange") DirectExchange xExchange){
         return BindingBuilder.bind(queueB).to(xExchange).with("XB");
     }
+
+    /**
+     * （解决了一个bug），交换机应该写DirectExchange，而不是Exchange！！！
+     * @param queueD
+     * @param yExchange
+     * @return
+     */
     @Bean
-    public BindingBuilder.GenericArgumentsConfigurer queueDBindingY(@Qualifier("queueD")Queue queueD,
-                                                                    @Qualifier("yExchange")Exchange yExchange){
+    public Binding queueDBindingY(@Qualifier("queueD") Queue queueD,
+                                  @Qualifier("yExchange") DirectExchange yExchange){
         return BindingBuilder.bind(queueD).to(yExchange).with("YD");
     }
-
-
 
 
 }
