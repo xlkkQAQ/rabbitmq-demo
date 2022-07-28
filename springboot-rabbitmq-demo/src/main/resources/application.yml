@@ -1,0 +1,9 @@
+spring:
+  rabbitmq:
+    host: 49.235.100.175
+    port: 5672
+    username: admin
+    password: admin
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
