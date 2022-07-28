@@ -28,5 +28,4 @@ public class ReceiveLogsDirect2 {
         CancelCallback callback = (consumerTag)->{};
         channel.basicConsume("disk",deliverCallback,callback);
     }
-
 }
