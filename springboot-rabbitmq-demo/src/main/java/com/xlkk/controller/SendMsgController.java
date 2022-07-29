@@ -60,7 +60,7 @@ public class SendMsgController {
                 DelayedQueueConfig.DELAYED_ROUTING_KEY,
                 "发给C的msg"+message,
                 (msg)->{
-            //设置发送消息的延时时长 ms
+            //设置发送消息的延迟时长 ms
             msg.getMessageProperties().setDelay(delayedTime);
             return msg;
         });
