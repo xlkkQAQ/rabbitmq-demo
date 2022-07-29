@@ -23,7 +23,6 @@ public class DelayedQueueConfig {
      * 队列
      */
     public static final String DELAYED_QUEUE_NAME = "delayed.queue";
-
     /**
      * 交换机
      */
