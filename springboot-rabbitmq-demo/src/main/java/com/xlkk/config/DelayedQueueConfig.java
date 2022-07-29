@@ -7,7 +7,6 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import sun.security.krb5.internal.CredentialsUtil;
 
 import java.util.HashMap;
 import java.util.Map;
