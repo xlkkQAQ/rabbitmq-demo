@@ -2,6 +2,7 @@ package com.xlkk.controller;
 
 import com.xlkk.config.ConfirmConfig;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,10 +24,14 @@ public class ProduceController {
 
     @GetMapping("/sendMsg/{message}")
     public void sendMessage(@PathVariable String message){
+        CorrelationData correlationData = new CorrelationData("1");
+
         rabbitTemplate.convertAndSend(
                 ConfirmConfig.CONFIRM_EXCHANGE_NAME,
                 ConfirmConfig.ROUTING_KEY,
-                message);
+                message,
+                correlationData);
+
         log.info("发送消息:{}",message);
 
     }
