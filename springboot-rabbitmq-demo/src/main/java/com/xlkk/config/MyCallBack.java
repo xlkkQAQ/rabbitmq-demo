@@ -1,12 +1,14 @@
 package com.xlkk.config;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.ReturnedMessage;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author xlkk
@@ -15,7 +17,7 @@ import javax.annotation.PostConstruct;
  */
 @Component
 @Slf4j
-public class MyCallBack implements RabbitTemplate.ConfirmCallback {
+public class MyCallBack implements RabbitTemplate.ConfirmCallback,RabbitTemplate.ReturnsCallback {
     /**
      * 注入Rabbitmq
      *
@@ -29,6 +31,7 @@ public class MyCallBack implements RabbitTemplate.ConfirmCallback {
     @PostConstruct
     public void init(){
         rabbitTemplate.setConfirmCallback(this);
+        rabbitTemplate.setReturnsCallback(this);
     }
     /**
      * 交换机回调方法：
@@ -54,5 +57,19 @@ public class MyCallBack implements RabbitTemplate.ConfirmCallback {
             log.info("交换机还未收到id为:{}的消息,由于原因:{}",id,cause);
         }
 
+    }
+
+    /**
+     * 回退接口实现
+     * 只有目的地不可达的时候，才会进行回退
+     * @param returned the returned message and metadata.
+     */
+    @Override
+    public void returnedMessage(ReturnedMessage returned) {
+        log.info("消息{}被交换机{}给退回，退回的原因是:{},RoutingKey是:{}",
+                new String(returned.getMessage().getBody(), StandardCharsets.UTF_8),
+                returned.getExchange(),
+                returned.getReplyText(),
+                returned.getRoutingKey());
     }
 }

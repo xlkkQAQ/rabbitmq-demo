@@ -5,6 +5,7 @@ spring:
     username: admin
     password: admin
     publisher-confirm-type: correlated
+    publisher-returns: true
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
