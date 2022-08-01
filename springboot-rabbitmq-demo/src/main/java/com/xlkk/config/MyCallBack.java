@@ -3,7 +3,10 @@ package com.xlkk.config;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @author xlkk
@@ -13,6 +16,20 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class MyCallBack implements RabbitTemplate.ConfirmCallback {
+    /**
+     * 注入Rabbitmq
+     *
+     */
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    /**
+     * 将回调接口注入到rabbitmq中
+     */
+    @PostConstruct
+    public void init(){
+        rabbitTemplate.setConfirmCallback(this);
+    }
     /**
      * 交换机回调方法：
      * 1.发消息 交换机接收到消息   回调
@@ -29,10 +46,13 @@ public class MyCallBack implements RabbitTemplate.ConfirmCallback {
      */
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
+        String id = correlationData != null? correlationData.getId() : "id为空";
         if(ack==true){
-            log.info("交换机已经收到Id为:{}的消息{}");
+            log.info("交换机已经收到Id为:{}的消息",id);
         }else {
-
+            //当出问题的时候ack=fasle
+            log.info("交换机还未收到id为:{}的消息,由于原因:{}",id,cause);
         }
+
     }
 }

@@ -4,6 +4,7 @@ spring:
     port: 5672
     username: admin
     password: admin
+    publisher-confirm-type: correlated
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
