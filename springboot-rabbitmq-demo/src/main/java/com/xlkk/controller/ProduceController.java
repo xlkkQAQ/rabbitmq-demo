@@ -30,14 +30,14 @@ public class ProduceController {
         rabbitTemplate.convertAndSend(
                 ConfirmConfig.CONFIRM_EXCHANGE_NAME,
                 ConfirmConfig.ROUTING_KEY,
-                message,
+                message+"key1",
                 correlationData
         );
         log.info("发送消息:{}",message+"key1");
         rabbitTemplate.convertAndSend(
                 ConfirmConfig.CONFIRM_EXCHANGE_NAME,
                 ConfirmConfig.ROUTING_KEY+"2",
-                message,
+                message+"key2",
                 correlationData2
         );
         log.info("发送消息:{}",message+"key12");
